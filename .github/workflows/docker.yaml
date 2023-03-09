@@ -1,4 +1,4 @@
-name: subscription-service 
+name: Docker CI
 
 on: 
   push: 
@@ -8,20 +8,20 @@ jobs:
   build: 
     timeout-minutes: 10 
     runs-on: ubuntu-latest 
-    steps: 
-      - name: Checkout 
-      uses: actions/checkout@v2
+    steps:
+      # - name: Checkout 
+      # uses: actions/checkout@v2
       
-      - name: Cache Local Images 
-      id: local-images 
-      uses: actions/cache@v3 
-      with: 
-        path: /var/lib/docker/ 
-        key: local-docker-directory
+      # - name: Cache Local Images 
+      # id: local-images 
+      # uses: actions/cache@v3 
+      # with: 
+      #   path: /var/lib/docker/ 
+      #   key: local-docker-directory
 
-      - name: Build Images 
-        working-directory: ./ 
-        run: docker compose up
+      # - name: Build Images 
+      #   working-directory: ./ 
+      #   run: docker compose up
 
 
 
