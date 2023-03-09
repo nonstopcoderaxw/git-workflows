@@ -22,6 +22,8 @@ jobs:
         with:
           node-version: "16.x"
       - run: yarn
+        working-directory: ./service-1
       - run: yarn test
         working-directory: ./service-1
+
       
