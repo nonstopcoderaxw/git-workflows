@@ -11,8 +11,9 @@ jobs:
     runs-on: ubuntu-latest 
     
     steps:
-      uses: actions/checkout@v3
-      run: docker compose up
+      - name: set up
+        uses: actions/checkout@v3
+        run: docker compose up
 
 
 
