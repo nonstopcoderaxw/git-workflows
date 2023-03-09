@@ -11,8 +11,23 @@ jobs:
     runs-on: ubuntu-latest 
     
     steps:
-      - name: set up
-        run: docker compose up
+      run: docker compose up
+
+
+
+      # - name: Checkout 
+      # uses: actions/checkout@v2
+      
+      # - name: Cache Local Images 
+      # id: local-images 
+      # uses: actions/cache@v3 
+      # with: 
+      #   path: /var/lib/docker/ 
+      #   key: local-docker-directory
+
+      # - name: Build Images 
+      #   working-directory: ./ 
+      #   run: docker compose up
 
 
 
