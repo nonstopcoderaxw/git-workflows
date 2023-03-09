@@ -1,0 +1,13 @@
+{
+  "name": "service-1",
+  "version": "1.0.0",
+  "license": "MIT",
+  "devDependencies": {
+    "express": "^4.9.5",
+    "mocha": "^10.2.0"
+  },
+  "scripts": {
+    "start:dev": "node index.js",
+    "test": "mocha"
+  }
+}
