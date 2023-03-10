@@ -6,8 +6,8 @@ on:
   
 jobs: 
   build: 
-    timeout-minutes: 10 
-    runs-on: ubuntu-latest 
+    timeout-minutes: 20 
+    runs-on: ubuntu-latest  # docker is preloaded in this vm
     steps:
       - name: Checkout
         uses: actions/checkout@v3
@@ -20,23 +20,5 @@ jobs:
       - name: Run docker container
         working-directory: ./ 
         run: docker compose -f ./base-compose.yaml -f ./service-1/docker-compose.yaml up
-
-
-
-      # - name: Checkout 
-      #   uses: actions/checkout@v2
-      
-      # - name: Cache Local Images 
-      # id: local-images 
-      # uses: actions/cache@v3 
-      # with: 
-      #   path: /var/lib/docker/ 
-      #   key: local-docker-directory
-
-      # - name: Build Images 
-      #   working-directory: ./ 
-      #   run: docker compose up
-
-
 
 
