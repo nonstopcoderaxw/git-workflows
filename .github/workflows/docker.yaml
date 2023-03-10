@@ -17,7 +17,9 @@ jobs:
         with: 
           path: /var/lib/docker/ 
           key: local-docker-directory 
-
+      - name: Build Images 
+        working-directory: ./ 
+        run: docker compose up
 
 
 
