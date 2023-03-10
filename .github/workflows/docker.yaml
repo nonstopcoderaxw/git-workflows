@@ -17,8 +17,8 @@ jobs:
         with: 
           path: /var/lib/docker/ 
           key: local-docker-directory 
-      - name: Run docker container
+      - name: Build docker images
         working-directory: ./ 
-        run: docker compose -f ./base-compose.yaml -f ./service-1/docker-compose.yaml up
+        run: docker compose -f ./base-compose.yaml -f ./service-1/docker-compose.yaml build
 
 
